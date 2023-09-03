@@ -1,10 +1,8 @@
-const express = require("express");
+const app = require("./app");
 
-const app = express();
+const apiRoutes = require("./src/Routes/app");
 
-app.get("/", (req, res) => {
-  res.send("response successful.");
-});
+app.use("/api", apiRoutes);
 
 const port = 8000;
 
